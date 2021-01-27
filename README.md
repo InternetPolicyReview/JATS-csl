@@ -6,6 +6,8 @@ This is a modified version of https://github.com/MartinPaulEve/JATS-CSL and http
 
 The JATS.csl file can be used with a processor such as [citeproc-js](https://github.com/Juris-M/citeproc-js) or software implementing it, such as [Zotero](https://www.zotero.org/).
 
+The open access journal [Internet Policy Review](https://policyreview.info) uses it as part of its reference workflow.
+
 ## Caution
 
 Be careful with special characters – which can't be escaped in with csl. You may have to do some postprocessing on the ouput.
