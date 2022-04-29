@@ -4,8 +4,8 @@
   <info>
     <title>Journal Article Tag Suite IPR</title>
     <title-short>JATS-IPR</title-short>
-    <id>http://www.zotero.org/styles/journal-article-tag-suite-ipr</id>
-    <link href="http://www.zotero.org/styles/journal-article-tag-suite-ipr" rel="self"/>
+    <id>https://github.com/InternetPolicyReview/JATS-csl</id>
+    <link href="https://github.com/InternetPolicyReview/JATS-csl" rel="self"/>
     <link rel="documentation" href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/index.html"/>
     <author>
       <name>Martin Fenner</name>
@@ -18,12 +18,14 @@
     <contributor>
       <name>Patrick Riechert</name>
       <email>patrick.riechert@hiig.de</email>
+      <uri>urspx.github.io/cv</uri>
     </contributor>
     <category citation-format="numeric"/>
     <category field="medicine"/>
     <category field="biology"/>
     <summary>Use this style to generate bibliographic data in Journal Article Tagging Suite (JATS) 1.0 XML format</summary>
-    <updated>2020-07-20T14:34:10+00:00</updated>
+    <published>2022-04</published>
+    <updated>2022-04-29T04:13:39+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -32,7 +34,10 @@
     </terms>
   </locale>
   <macro name="citation-label">
-    <text variable="citation-label" prefix="id=&quot;" suffix="&quot;&gt;"/>
+    <group delimiter="_">
+      <text variable="citation-label"/>
+      <text variable="citation-number"/>
+    </group>
   </macro>
   <macro name="author">
     <names variable="author">
@@ -157,18 +162,22 @@
       </choose>
     </group>
   </macro>
+  <macro name="citation-label-wrap">
+    <text macro="citation-label"/>
+    <group/>
+  </macro>
   <citation collapse="citation-number">
     <sort>
       <key variable="citation-number"/>
     </sort>
-    <layout delimiter=",">
-      <text variable="citation-label"/>
+    <layout delimiter=" ">
+      <text macro="citation-label"/>
     </layout>
   </citation>
   <bibliography sort-separator="">
     <layout>
       <group prefix="&lt;ref " suffix="&lt;/ref&gt;">
-        <text macro="citation-label" suffix=" "/>
+        <text macro="citation-label-wrap" prefix="id=&quot;" suffix="&quot;&gt;"/>
         <group prefix="&lt;element-citation" suffix="&lt;/element-citation&gt; ">
           <text macro="publication-type"/>
           <text macro="author" prefix="&lt;person-group person-group-type=&quot;author&quot;&gt;" suffix="&lt;/person-group&gt;"/>
