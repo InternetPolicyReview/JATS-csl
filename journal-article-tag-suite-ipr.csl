@@ -4,8 +4,8 @@
   <info>
     <title>Journal Article Tag Suite IPR</title>
     <title-short>JATS-IPR</title-short>
-    <id>https://github.com/InternetPolicyReview/JATS-csl</id>
-    <link href="https://github.com/InternetPolicyReview/JATS-csl" rel="self"/>
+    <id>http://www.zotero.org/styles/journal-article-tag-suite-ipr</id>
+    <link href="http://www.zotero.org/styles/journal-article-tag-suite-ipr" rel="self"/>
     <link rel="documentation" href="http://jats.nlm.nih.gov/archiving/tag-library/1.0/index.html"/>
     <author>
       <name>Martin Fenner</name>
@@ -24,8 +24,8 @@
     <category field="medicine"/>
     <category field="biology"/>
     <summary>Use this style to generate bibliographic data in Journal Article Tagging Suite (JATS) 1.0 XML format</summary>
-    <published>2022-04</published>
-    <updated>2022-04-29T04:13:39+00:00</updated>
+    <published>2025-02</published>
+    <updated>2025-02-10T13:09:49+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="en">
@@ -35,8 +35,7 @@
   </locale>
   <macro name="citation-label">
     <group delimiter="_">
-      <text variable="citation-label"/>
-      <text variable="citation-number"/>
+      <text variable="citation-key"/>
     </group>
   </macro>
   <macro name="author">
